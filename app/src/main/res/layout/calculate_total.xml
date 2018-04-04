@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:background="#ffffff"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:descendantFocusability="beforeDescendants"
+        android:focusableInTouchMode="true"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/price"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+            android:hint="@string/enter_price"
+            android:inputType="numberDecimal" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <me.omidh.liquidradiobutton.LiquidRadioButton
+                    android:id="@+id/radbtn_11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/add_to_all"
+                    app:lrb_explodeCount="3"
+                    app:lrb_inAnimDuration="500"
+                    app:lrb_innerCircleRadius="15dp"
+                    app:lrb_outAnimDuration="500"
+                    app:lrb_outterPadding="8dp"
+                    app:lrb_strokeRadius="15dp"
+                    app:lrb_strokeWidth="1dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <me.omidh.liquidradiobutton.LiquidRadioButton
+                    android:id="@+id/radbtn_12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/add_to_selected_users"
+                    app:lrb_explodeCount="3"
+                    app:lrb_inAnimDuration="500"
+                    app:lrb_innerCircleRadius="15dp"
+                    app:lrb_outAnimDuration="500"
+                    app:lrb_outterPadding="8dp"
+                    app:lrb_strokeRadius="15dp"
+                    app:lrb_strokeWidth="1dp" />
+
+                <TextView
+                    android:id="@+id/radbtn_text_12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <me.omidh.liquidradiobutton.LiquidRadioButton
+                    android:id="@+id/radbtn_21"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/add_to_all_equally"
+                    app:lrb_explodeCount="3"
+                    app:lrb_inAnimDuration="500"
+                    app:lrb_innerCircleRadius="15dp"
+                    app:lrb_outAnimDuration="500"
+                    app:lrb_outterPadding="8dp"
+                    app:lrb_strokeRadius="15dp"
+                    app:lrb_strokeWidth="1dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <me.omidh.liquidradiobutton.LiquidRadioButton
+                    android:id="@+id/radbtn_22"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/divide_by_every_user"
+                    app:lrb_explodeCount="3"
+                    app:lrb_inAnimDuration="500"
+                    app:lrb_innerCircleRadius="15dp"
+                    app:lrb_outAnimDuration="500"
+                    app:lrb_outterPadding="8dp"
+                    app:lrb_strokeRadius="15dp"
+                    app:lrb_strokeWidth="1dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+
+            android:id="@+id/plusButton"
+            android:layout_width="@dimen/material_component_button_height"
+            android:layout_height="@dimen/material_component_button_height"
+            android:layout_margin="@dimen/material_component_floating_action_button_margin"
+            android:background="@drawable/btn_flat_normal_blue"
+            android:text="+" />
+
+        <Button
+            android:id="@+id/minusButton"
+            android:layout_width="@dimen/material_component_button_height"
+            android:layout_height="@dimen/material_component_button_height"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="@dimen/material_component_floating_action_button_margin"
+            android:background="@drawable/btn_flat_normal_red"
+            android:text="-" />
+    </RelativeLayout>
+
+    <GridView
+        android:layout_marginTop="18dp"
+        android:gravity="center"
+        android:id="@+id/gridview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnWidth="120dp"
+        android:layout_gravity="center"
+        android:horizontalSpacing="10dp"
+        android:numColumns="auto_fit"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="10dp"
+        android:layout_marginBottom="30dp"/>
+
+        <TextView
+            android:layout_gravity="center"
+            android:text="@string/billTotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_margin="30dp"
+            android:textSize="30sp"
+            android:layout_gravity="center"
+            android:id="@+id/totalprice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+
+</LinearLayout>
