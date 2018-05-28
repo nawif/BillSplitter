@@ -3,6 +3,7 @@ package com.example.android;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.Color;
+import android.os.Build;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
@@ -33,7 +34,7 @@ public class friendsAdapter extends ArrayAdapter<friends> {
     public View getView(final int position, @Nullable final View convertView, @NonNull final ViewGroup parent) {
         View listItem = convertView;
         if(listItem == null)
-            listItem = LayoutInflater.from(getContext()).inflate(R.layout.singleperson,parent,false);
+            listItem = LayoutInflater.from(getContext()).inflate(R.layout.card,parent,false);
         // Declare Views
         CheckBox isSelected=listItem.findViewById(R.id.isSelected);
         TextView name=listItem.findViewById(R.id.name);
@@ -61,6 +62,9 @@ public class friendsAdapter extends ArrayAdapter<friends> {
                 getView(position, convertView,parent);
             }
         });
-        return listItem;
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP)
+            listItem.setElevation(10);
+
+            return listItem;
     }
 }

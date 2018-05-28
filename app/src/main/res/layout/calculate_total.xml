@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
+    android:layout_marginTop="21dp"
     android:background="#ffffff"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -129,13 +130,12 @@
         android:orientation="horizontal">
 
         <Button
-
+            android:textColor="#ffff"
             android:id="@+id/plusButton"
             android:layout_width="@dimen/material_component_button_height"
             android:layout_height="@dimen/material_component_button_height"
             android:layout_margin="@dimen/material_component_floating_action_button_margin"
-            android:background="@drawable/btn_flat_normal_blue"
-            android:text="+" />
+            android:background="@drawable/ic_002_plus"/>
 
         <Button
             android:id="@+id/minusButton"
@@ -143,11 +143,11 @@
             android:layout_height="@dimen/material_component_button_height"
             android:layout_alignParentEnd="true"
             android:layout_margin="@dimen/material_component_floating_action_button_margin"
-            android:background="@drawable/btn_flat_normal_red"
-            android:text="-" />
+            android:background="@drawable/ic_001_negative"/>
     </RelativeLayout>
 
     <GridView
+        android:clipToPadding="false"
         android:layout_marginTop="18dp"
         android:gravity="center"
         android:id="@+id/gridview"
