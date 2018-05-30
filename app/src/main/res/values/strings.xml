@@ -9,5 +9,9 @@
     <string name="didnt_Choose_participants">الرجاء أختيار الأشخاص الراغب إضافتهم</string>
     <string name="billTotal">إجمالي المبلغ</string>
     <string name="userNmae">مستخدم</string>
+    <string name="deleteProcess">حذف البيانات</string>
+    <string name="undo">تراجع</string>
+
+
 
 </resources>

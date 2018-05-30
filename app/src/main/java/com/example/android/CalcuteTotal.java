@@ -12,6 +12,9 @@ import android.widget.TextView;
 
 import com.example.android.Data.AddType;
 import com.example.android.Data.friends;
+import com.travijuu.numberpicker.library.Enums.ActionEnum;
+import com.travijuu.numberpicker.library.Interface.ValueChangedListener;
+import com.travijuu.numberpicker.library.NumberPicker;
 import com.valdesekamdem.library.mdtoast.MDToast;
 import java.util.ArrayList;
 import me.omidh.liquidradiobutton.LiquidRadioButton;
@@ -30,6 +33,7 @@ public class CalcuteTotal extends Activity {
     static ArrayList<Integer> checkedBoxes=new ArrayList<>();
     ArrayList<friends> frls;
     friendsAdapter frAd;
+    NumberPicker numberPicker;
     // this method is called when a checkbox is checked, and its register its position,
     // if its already checked it remove the position from the array
     public static void isChecked(int position){
@@ -113,25 +117,10 @@ public class CalcuteTotal extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.calculate_total);
-        gr = findViewById(R.id.gridview);
-        frls=new ArrayList<>();
-        for(int i=0;i<5;i++){
-            frls.add(dumbData());
-        }
+        init();
         frAd = new friendsAdapter(this,frls);
         gr.setAdapter(frAd);
-        divide_by_every_user = findViewById(R.id.radbtn_22);
-        add_to_all_equally=findViewById(R.id.radbtn_21);
-        add_to_all=findViewById(R.id.radbtn_11);
-        add_to_selected_users=findViewById(R.id.radbtn_12);
-        increasebtn=findViewById(R.id.plusButton);
-        deccreasebtn=findViewById(R.id.minusButton);
-        userValue=findViewById(R.id.price);
-        add_to_all_equally.setChecked(true);
-        add_to_all.setChecked(true);
-        totalPrice=findViewById(R.id.totalprice);
-        totalPrice.setText(0+"");
-        gr.setChoiceMode(GridView.CHOICE_MODE_MULTIPLE);
+
         //first 2 radioButtons
         divide_by_every_user.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -199,6 +188,51 @@ public class CalcuteTotal extends Activity {
         });
 
 
+    }
+
+    private void init() {
+        frls=new ArrayList<>();
+        setNumOfPeople(3);
+        gr = findViewById(R.id.gridview);
+        divide_by_every_user = findViewById(R.id.radbtn_22);
+        add_to_all_equally=findViewById(R.id.radbtn_21);
+        add_to_all=findViewById(R.id.radbtn_11);
+        add_to_selected_users=findViewById(R.id.radbtn_12);
+        increasebtn=findViewById(R.id.plusButton);
+        deccreasebtn=findViewById(R.id.minusButton);
+        userValue=findViewById(R.id.price);
+        totalPrice=findViewById(R.id.totalprice);
+        add_to_all_equally.setChecked(true);
+        add_to_all.setChecked(true);
+        totalPrice.setText(0+"");
+        numberPicker = (NumberPicker) findViewById(R.id.numOfPeople);
+        numberPicker.setMin(2);
+        numberPicker.setValue(3);
+        numberPicker.setValueChangedListener(new ValueChangedListener() {
+            @Override
+            public void valueChanged(int value, ActionEnum action) {
+                setNumOfPeople(value);
+
+            }
+        });
+    }
+
+    private void setNumOfPeople(int value) {
+        try {
+            if(value<frls.size())
+                frls.remove(frls.size()-1);
+            else {
+                frls.trimToSize();
+                for (int i = frls.size(); i < value; i++)
+                    frls.add(dumbData());
+            }
+            frAd = new friendsAdapter(this, frls);
+            gr.setAdapter(frAd);
+            updateTotal();
+        }catch (NullPointerException e){
+            Log.e("setNumOfPeople",e.getMessage());
+        }
+        Log.d("setNumOfPeople",frls.size()+"");
     }
 }
 
