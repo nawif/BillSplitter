@@ -2,7 +2,6 @@ package com.example.android;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
-import android.graphics.Color;
 import android.os.Build;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -11,10 +10,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.CheckBox;
-import android.widget.EditText;
 import android.widget.TextView;
 
-import com.example.android.Data.friends;
+import com.example.android.Data.nameAndTotal;
 
 import java.util.List;
 
@@ -23,10 +21,10 @@ import java.util.List;
  *
  */
 
-public class friendsAdapter extends ArrayAdapter<friends> {
+public class friendsAdapter extends ArrayAdapter<nameAndTotal> {
     static boolean hideChecked=true;
 
-    friendsAdapter(@NonNull Context context, @NonNull List<friends> objects) {
+    friendsAdapter(@NonNull Context context, @NonNull List<nameAndTotal> objects) {
         super(context, 0, objects);
     }
     @NonNull
@@ -42,7 +40,7 @@ public class friendsAdapter extends ArrayAdapter<friends> {
 //        listItem.setAlpha(0.75f);
 //        listItem.setBackgroundColor(Color.LTGRAY);
         // Giving it values
-        friends fr = getItem(position);
+        nameAndTotal fr = getItem(position);
         if (fr != null) {
             name.setText(fr.getName());
         }
