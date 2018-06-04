@@ -34,20 +34,20 @@
                 android:orientation="horizontal">
 
                 <me.omidh.liquidradiobutton.LiquidRadioButton
-                    app:lrb_checkedColor="@color/secondaryColor"
-                    app:lrb_unCheckedColor="@color/secondaryColor"
                     android:id="@+id/radbtn_11"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:text="@string/add_to_all"
+                    app:lrb_checkedColor="@color/secondaryColor"
                     app:lrb_explodeCount="3"
                     app:lrb_inAnimDuration="500"
                     app:lrb_innerCircleRadius="15dp"
                     app:lrb_outAnimDuration="500"
                     app:lrb_outterPadding="8dp"
                     app:lrb_strokeRadius="15dp"
-                    app:lrb_strokeWidth="1dp" />
+                    app:lrb_strokeWidth="1dp"
+                    app:lrb_unCheckedColor="@color/secondaryColor" />
             </LinearLayout>
 
             <LinearLayout
@@ -56,20 +56,20 @@
                 android:orientation="horizontal">
 
                 <me.omidh.liquidradiobutton.LiquidRadioButton
-                    app:lrb_checkedColor="@color/secondaryColor"
-                    app:lrb_unCheckedColor="@color/secondaryColor"
                     android:id="@+id/radbtn_12"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:text="@string/add_to_selected_users"
+                    app:lrb_checkedColor="@color/secondaryColor"
                     app:lrb_explodeCount="3"
                     app:lrb_inAnimDuration="500"
                     app:lrb_innerCircleRadius="15dp"
                     app:lrb_outAnimDuration="500"
                     app:lrb_outterPadding="8dp"
                     app:lrb_strokeRadius="15dp"
-                    app:lrb_strokeWidth="1dp" />
+                    app:lrb_strokeWidth="1dp"
+                    app:lrb_unCheckedColor="@color/secondaryColor" />
 
                 <TextView
                     android:id="@+id/radbtn_text_12"
@@ -77,6 +77,12 @@
                     android:layout_height="wrap_content" />
             </LinearLayout>
         </LinearLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:background="@color/secondaryColor" />
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -89,19 +95,20 @@
                 android:orientation="horizontal">
 
                 <me.omidh.liquidradiobutton.LiquidRadioButton
-                    app:lrb_checkedColor="@color/secondaryColor"
-                    app:lrb_unCheckedColor="@color/secondaryColor"                    android:id="@+id/radbtn_21"
+                    android:id="@+id/radbtn_21"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:text="@string/add_to_all_equally"
+                    app:lrb_checkedColor="@color/secondaryColor"
                     app:lrb_explodeCount="3"
                     app:lrb_inAnimDuration="500"
                     app:lrb_innerCircleRadius="15dp"
                     app:lrb_outAnimDuration="500"
                     app:lrb_outterPadding="8dp"
                     app:lrb_strokeRadius="15dp"
-                    app:lrb_strokeWidth="1dp" />
+                    app:lrb_strokeWidth="1dp"
+                    app:lrb_unCheckedColor="@color/secondaryColor" />
 
             </LinearLayout>
 
@@ -111,23 +118,28 @@
                 android:orientation="horizontal">
 
                 <me.omidh.liquidradiobutton.LiquidRadioButton
-                    app:lrb_checkedColor="@color/secondaryColor"
-                    app:lrb_unCheckedColor="@color/secondaryColor"
                     android:id="@+id/radbtn_22"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:text="@string/divide_by_every_user"
+                    app:lrb_checkedColor="@color/secondaryColor"
                     app:lrb_explodeCount="3"
                     app:lrb_inAnimDuration="500"
                     app:lrb_innerCircleRadius="15dp"
                     app:lrb_outAnimDuration="500"
                     app:lrb_outterPadding="8dp"
                     app:lrb_strokeRadius="15dp"
-                    app:lrb_strokeWidth="1dp" />
+                    app:lrb_strokeWidth="1dp"
+                    app:lrb_unCheckedColor="@color/secondaryColor" />
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_margin="5dp"
+        android:background="@color/secondaryColor" />
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -148,11 +160,13 @@
             android:background="@drawable/ic_001_negative"/>
     </RelativeLayout>
     <LinearLayout
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <Button
             android:textSize="18sp"
-            android:id="@+id/deleteBtn"
+            android:id="@+id/resetBtn"
             android:layout_marginStart="7dp"
             android:textColor="@color/secondaryTextColor"
             android:drawableTint="@color/secondaryTextColor"
@@ -185,6 +199,26 @@
             android:layout_height="wrap_content"/>
 
     </LinearLayout>
+    <TextView
+        android:layout_marginTop="16dp"
+        style="@style/Base.TextAppearance.AppCompat.Title"
+        android:layout_gravity="center"
+        android:text="@string/billTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:layout_marginTop="30dp"
+        android:textSize="30sp"
+        android:layout_gravity="center"
+        android:id="@+id/totalprice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_margin="5dp"
+        android:background="@color/secondaryColor" />
+
     <GridView
         android:clipToPadding="false"
         android:layout_marginTop="18dp"
@@ -199,16 +233,5 @@
         android:stretchMode="columnWidth"
         android:verticalSpacing="10dp"
         android:layout_marginBottom="30dp"/>
-        <TextView
-            android:layout_gravity="center"
-            android:text="@string/billTotal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-        <TextView
-            android:layout_margin="30dp"
-            android:textSize="30sp"
-            android:layout_gravity="center"
-            android:id="@+id/totalprice"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+
 </LinearLayout>

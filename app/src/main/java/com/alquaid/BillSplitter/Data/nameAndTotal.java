@@ -1,10 +1,10 @@
-package com.example.android.Data;
+package com.alquaid.BillSplitter.Data;
 
 /**
  * Created by Nawif on 2/20/18.
  */
 
-public class friends {
+public class nameAndTotal {
     String name;
     double total;
 
@@ -24,8 +24,12 @@ public class friends {
         this.total =Math.floor(total * 100) / 100;
     }
 
-    public friends(String name, double total) {
+    public nameAndTotal(String name, double total) {
         this.name = name;
         this.total = total;
+    }
+    public nameAndTotal(nameAndTotal NameAndTotal) {
+        this.name = NameAndTotal.name;
+        this.total = NameAndTotal.total;
     }
 }

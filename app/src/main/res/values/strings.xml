@@ -1,17 +1,16 @@
 <resources>
-    <string name="app_name">كم قطتنا</string>
-    <string name="divide_by_every_user">قسمها على العدد</string>
-    <string name="add_to_all_equally">أضفها بالتساوي</string>
-    <string name="add_to_all">اضفها للكل</string>
-    <string name="add_to_selected_users">أختار لمين</string>
-    <string name="enter_price">المبلغ</string>
-    <string name="didnt_Enter_value">الرجاء ادخال المبلغ المرجي حسابه</string>
-    <string name="didnt_Choose_participants">الرجاء أختيار الأشخاص الراغب إضافتهم</string>
-    <string name="billTotal">إجمالي المبلغ</string>
-    <string name="userNmae">مستخدم</string>
-    <string name="deleteProcess">حذف البيانات</string>
-    <string name="undo">تراجع</string>
-
+    <string name="app_name">Bill Splitter</string>
+    <string name="add_to_all_equally">Add to each</string>
+    <string name="add_to_all">Add to all</string>
+    <string name="enter_price">Value</string>
+    <string name="didnt_Enter_value">Please enter a value you want to add</string>
+    <string name="didnt_Choose_participants">Please choose participants</string>
+    <string name="billTotal">Bill Total</string>
+    <string name="userNmae">Person</string>
+    <string name="undo">Undo</string>
+    <string name="add_to_selected_users">Select certain \n users</string>
+    <string name="deleteProcess">Reset</string>
+    <string name="divide_by_every_user">Divide by each</string>
 
 
 </resources>

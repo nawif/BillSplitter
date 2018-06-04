@@ -1,4 +1,4 @@
-package com.example.android;
+package com.alquaid.BillSplitter;
 
 import org.junit.Test;
 

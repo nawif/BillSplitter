@@ -3,11 +3,11 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 27
     defaultConfig {
-        applicationId "com.example.android"
-        minSdkVersion 23
+        applicationId "com.alquaid.BillSplitter"
+        minSdkVersion 16
         targetSdkVersion 27
         versionCode 1
-        versionName "1.0"
+        versionName "1.0.1"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
@@ -31,7 +31,6 @@ dependencies {
     compile 'com.valdesekamdem.library:md-toast:0.9.0'
     compile 'com.android.support:cardview-v7:24.2.1'
     compile 'com.github.travijuu:numberpicker:1.0.7'
-
-
+    compile 'com.fxn769:stash:1.3.1'
 
 }

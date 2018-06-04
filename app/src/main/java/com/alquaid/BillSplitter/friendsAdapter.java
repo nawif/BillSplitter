@@ -1,4 +1,4 @@
-package com.example.android;
+package com.alquaid.BillSplitter;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -12,7 +12,7 @@ import android.widget.ArrayAdapter;
 import android.widget.CheckBox;
 import android.widget.TextView;
 
-import com.example.android.Data.nameAndTotal;
+import com.alquaid.BillSplitter.Data.nameAndTotal;
 
 import java.util.List;
 
@@ -34,11 +34,9 @@ public class friendsAdapter extends ArrayAdapter<nameAndTotal> {
         if(listItem == null)
             listItem = LayoutInflater.from(getContext()).inflate(R.layout.card,parent,false);
         // Declare Views
-        CheckBox isSelected=listItem.findViewById(R.id.isSelected);
+        final CheckBox isSelected=listItem.findViewById(R.id.isSelected);
         TextView name=listItem.findViewById(R.id.name);
         TextView price=listItem.findViewById(R.id.balance);
-//        listItem.setAlpha(0.75f);
-//        listItem.setBackgroundColor(Color.LTGRAY);
         // Giving it values
         nameAndTotal fr = getItem(position);
         if (fr != null) {
@@ -48,11 +46,9 @@ public class friendsAdapter extends ArrayAdapter<nameAndTotal> {
             price.setText(fr.getTotal()+"");
         }
         if(hideChecked)
-         isSelected.setVisibility(View.INVISIBLE);
+            isSelected.setVisibility(View.INVISIBLE);
         else
             isSelected.setVisibility(View.VISIBLE);
-//        if(CalcuteTotal.checkedBoxes.contains(position))
-//            isSelected.setVisibility(View.VISIBLE);
         isSelected.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -60,9 +56,18 @@ public class friendsAdapter extends ArrayAdapter<nameAndTotal> {
                 getView(position, convertView,parent);
             }
         });
+        listItem.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(CalcuteTotal.isChecked(position))
+                    isSelected.setChecked(true);
+                else
+                    isSelected.setChecked(false);
+                getView(position, convertView,parent);
+            }
+        });
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP)
             listItem.setElevation(10);
-
             return listItem;
     }
 }
