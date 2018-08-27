@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">كم قطتنا</string>
-    <string name="divide_by_every_user">قسمها على العدد</string>
-    <string name="add_to_all_equally">أضفها بالتساوي</string>
+    <array name="switch_tabs">
+        <item name="divide_by_every_user">قسمها على العدد</item>
+        <item name="add_to_all_equally">أضفها بالتساوي</item>
+    </array>
     <string name="add_to_all">اضفها للكل</string>
     <string name="add_to_selected_users">أختار لمين</string>
     <string name="enter_price">المبلغ</string>
@@ -12,4 +14,8 @@
     <string name="userNmae">مستخدم</string>
     <string name="deleteProcess">حذف البيانات</string>
     <string name="undo">تراجع</string>
+    <string name="item_price">السعر للعنصر الواحد</string>
+    <string name="add">أضفها</string>
+    <string name="check_all">حدد الكل</string>
+    <string name="uncheck_all">الغاء التحديد</string>
 </resources>

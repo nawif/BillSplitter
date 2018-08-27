@@ -24,7 +24,7 @@ import lib.kingja.switchbutton.SwitchMultiButton;
  * Created by Nawif on 2/20/18.
  */
 
-public class CalcuteTotal extends Activity {
+public class CalculateTotal extends Activity {
     MyGridView gr;
     Button increase, undoButton,resetButton, checkAll,UncheckAll;
     EditText userValue;
@@ -65,7 +65,7 @@ public class CalcuteTotal extends Activity {
             double value = getEveryPersonValue(addType);
             Log.e("addTotal 'value' ",value+"");
             if(checkedBoxes.size()==0){
-                MDToast.makeText(CalcuteTotal.this,getText(R.string.didnt_Choose_participants).toString(),MDToast.LENGTH_LONG,MDToast.TYPE_ERROR).show();
+                MDToast.makeText(CalculateTotal.this,getText(R.string.didnt_Choose_participants).toString(),MDToast.LENGTH_LONG,MDToast.TYPE_ERROR).show();
                 return;
             }
 
@@ -82,7 +82,7 @@ public class CalcuteTotal extends Activity {
             updateTotal();
 
         }catch (NumberFormatException e){
-            MDToast.makeText(CalcuteTotal.this,getText(R.string.didnt_Enter_value).toString(),MDToast.LENGTH_LONG,MDToast.TYPE_ERROR).show();
+            MDToast.makeText(CalculateTotal.this,getText(R.string.didnt_Enter_value).toString(),MDToast.LENGTH_LONG,MDToast.TYPE_ERROR).show();
         }
     }
     private double getEveryPersonValue(AddType addType){
@@ -139,7 +139,7 @@ public class CalcuteTotal extends Activity {
                     current.setTotal(0);
                     frls.set(i, current);
                 }
-                frAd = new friendsAdapter(CalcuteTotal.this, frls);
+                frAd = new friendsAdapter(CalculateTotal.this, frls);
                 gr.setAdapter(frAd);
                 updateTotal();
             }

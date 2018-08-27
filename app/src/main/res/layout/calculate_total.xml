@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<ScrollView
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
     <LinearLayout
@@ -32,22 +36,22 @@
             android:inputType="numberDecimal"
             android:hint="@string/valueHint"/>
 
-        <lib.kingja.switchbutton.SwitchMultiButton
-            android:id="@+id/splitway"
-            android:layout_gravity="center"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
-            android:layout_marginStart="8dp"
-            android:padding="8dp"
-            app:selectedColor="#eb7b00"
-            app:selectedTab="0"
-            app:strokeRadius="5dp"
-            app:strokeWidth="1dp"
-            app:switchTabs="@array/switch_tabs"
-            app:textSize="14sp" />
+        <!--<lib.kingja.switchbutton.SwitchMultiButton-->
+            <!--android:id="@+id/splitway"-->
+            <!--android:layout_gravity="center"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginEnd="8dp"-->
+            <!--android:layout_marginLeft="8dp"-->
+            <!--android:layout_marginRight="8dp"-->
+            <!--android:layout_marginStart="8dp"-->
+            <!--android:padding="8dp"-->
+            <!--app:selectedColor="#eb7b00"-->
+            <!--app:selectedTab="0"-->
+            <!--app:strokeRadius="5dp"-->
+            <!--app:strokeWidth="1dp"-->
+            <!--app:switchTabs="@array/switch_tabs"-->
+            <!--app:textSize="14sp" />-->
         <Button
             android:id="@+id/add"
             android:layout_marginTop="12dp"
@@ -148,10 +152,11 @@
                 android:drawableTint="@color/secondaryTextColor"
                 android:backgroundTint="@color/secondaryColor"
                 android:text="@string/uncheck_all"
-                android:drawableStart="@drawable/ic_001_correct"
+                android:drawableStart="@drawable/ic_002_cancel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:drawableLeft="@drawable/ic_undo_black_24dp"/>
+                android:drawableLeft="@drawable/ic_002_cancel"
+                android:layout_alignParentRight="true" />
         </RelativeLayout>
         <com.alquaid.BillSplitter.MyGridView
             android:clipToPadding="false"
@@ -165,7 +170,8 @@
             android:layout_gravity="center"
             android:horizontalSpacing="10dp"
             android:numColumns="auto_fit"
-            android:verticalSpacing="10dp"/>
-
+            android:verticalSpacing="10dp"
+            android:layout_marginBottom="20dp"/>
     </LinearLayout>
 </ScrollView>
+</RelativeLayout>

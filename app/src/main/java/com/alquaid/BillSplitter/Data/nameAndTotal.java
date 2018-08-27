@@ -5,9 +5,9 @@ package com.alquaid.BillSplitter.Data;
  */
 
 public class nameAndTotal {
-    String name;
-    double total;
-
+    private String name;
+    private double total;
+    public double totalForAll=0;
     public String getName() {
         return name;
     }

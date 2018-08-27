@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">Bill Splitter</string>
-    <string name="add_to_all_equally">Add to each</string>
     <string name="add_to_all">Add to all</string>
     <string name="enter_price">Value</string>
     <string name="didnt_Enter_value">Please enter a value you want to add</string>
@@ -10,7 +9,16 @@
     <string name="undo">Undo</string>
     <string name="add_to_selected_users">Select certain \n users</string>
     <string name="deleteProcess">Reset</string>
-    <string name="divide_by_every_user">Divide by each</string>
+    <string name="valueHint" translatable="false">0.00</string>
+    <string name="item_price">Item Price</string>
+    <string name="add">Add</string>
+    <string name="check_all">Check All</string>
+    <string name="uncheck_all">uncheck all</string>
+
+    <array name="switch_tabs">
+        <item name="divide_by_every_user">Divide by each</item>
+        <item name="add_to_all_equally">Add to each</item>
+    </array>
 
 
 </resources>
