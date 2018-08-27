@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<ScrollView
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
     <LinearLayout
@@ -148,10 +152,11 @@
                 android:drawableTint="@color/secondaryTextColor"
                 android:backgroundTint="@color/secondaryColor"
                 android:text="@string/uncheck_all"
-                android:drawableStart="@drawable/ic_001_correct"
+                android:drawableStart="@drawable/ic_002_cancel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:drawableLeft="@drawable/ic_undo_black_24dp"/>
+                android:drawableLeft="@drawable/ic_002_cancel"
+                android:layout_alignParentRight="true" />
         </RelativeLayout>
         <com.alquaid.BillSplitter.MyGridView
             android:clipToPadding="false"
@@ -165,7 +170,8 @@
             android:layout_gravity="center"
             android:horizontalSpacing="10dp"
             android:numColumns="auto_fit"
-            android:verticalSpacing="10dp"/>
-
+            android:verticalSpacing="10dp"
+            android:layout_marginBottom="20dp"/>
     </LinearLayout>
 </ScrollView>
+</RelativeLayout>
